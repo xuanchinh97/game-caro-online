@@ -58,7 +58,7 @@ function setupChessmans(){
 function chessMove(newX,newY){
         $("#pos-"+oldX+"-"+oldY).hide();
         $("#pos-hide").css({
-            "background-image": 'url("../Images/Xiangqi/'+ arrChess[oldX][oldY] +'")',
+            "background-image": 'url("../images/Xiangqi/'+ arrChess[oldX][oldY] +'")',
             "top": oldX*DISTANCECHESS+"px",
             "left": oldY*DISTANCECHESS+"px",
             "z-index": 2
@@ -84,7 +84,7 @@ function switchPos(newX,newY){
             "background-image": 'none',
         });
         $( "#pos-"+newX+"-"+newY ).css({
-            "background-image": 'url("../Images/Xiangqi/'+ arrChess[oldX][oldY] +'")',
+            "background-image": 'url("../images/Xiangqi/'+ arrChess[oldX][oldY] +'")',
         });
 }
 function checkMove(newX,newY){
@@ -387,7 +387,7 @@ function restartGame(){
                         id: "pos-"+i+"-"+j,
                         "class": 'align-items-center pb-2 mb-3 khung-ban-co quan-co'
                     }).css({
-                        "background-image": 'url("../Images/Xiangqi/'+ arrChess[i][j] +'")',
+                        "background-image": 'url("../images/Xiangqi/'+ arrChess[i][j] +'")',
                         "top": posX+"px",
                         "left": posY+"px"
                     }).appendTo('#khung-ban-co-2');

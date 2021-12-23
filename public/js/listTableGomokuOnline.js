@@ -6,7 +6,7 @@ $(document).ready(function(){
     //
     let roomNum = 12;
     let arrRoom = [];
-    $(".table-image").attr("src", "../Images/tables/table-0.png");
+    $(".table-image").attr("src", "../images/tables/table-0.png");
     socket.emit("client-join-room",{idRoomNumber:idRoomNumber,username:username});
     $("#btn-submit-login").click(function(){
         username = $("#username-input").val();
@@ -54,11 +54,11 @@ $(document).ready(function(){
     function reloadRoom(){
         for(let i=0;i<roomNum;i++){
             if(arrRoom[i][0].length==0){
-                $("#table-"+i+"-img").attr("src", "../Images/tables/table-0.png");
+                $("#table-"+i+"-img").attr("src", "../images/tables/table-0.png");
             }else if(arrRoom[i][0].length==1){
-                $("#table-"+i+"-img").attr("src", "../Images/tables/table-1.png");
+                $("#table-"+i+"-img").attr("src", "../images/tables/table-1.png");
             }else{
-                $("#table-"+i+"-img").attr("src", "../Images/tables/table-2.png");
+                $("#table-"+i+"-img").attr("src", "../images/tables/table-2.png");
             }
         }
     }

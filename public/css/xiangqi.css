@@ -17,7 +17,7 @@
 	position: absolute;
 }
 .ban-co{
-	background-image: url("../Images/Xiangqi/xiangqi_empty_board.png");
+	background-image: url("../images/Xiangqi/xiangqi_empty_board.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	width: 501px;
