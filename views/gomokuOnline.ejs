@@ -4,8 +4,8 @@
 <head>
     <%- include('masterPage/head.ejs'); -%>
     <link rel="stylesheet" href="css/gomoku.css">
-    <script defer src="js/processGomokuOnline.js"></script>
     <script defer src="js/listTableGomokuOnline.js"></script>
+    <script defer src="js/processGomokuOnline.js"></script>
     <script defer src="js/event.js"></script>
     <script defer src="js/messageEvent.js"></script>
     <title>Game Caro Online - 97</title>
@@ -37,8 +37,7 @@
                                     <p id="id-ban-<%= i %>-p" class="my-table-name-p">Bàn <%= i %></p>
                                 </div>
                                 <div class="icon">
-                                    <img id="table-<%= i %>-img" class="table-image"
-                                        src="../images/tables/table-0.png" />
+                                    <img id="table-<%= i-1 %>-img" class="table-image"/>
                                 </div>
                             </div>
                         </div>

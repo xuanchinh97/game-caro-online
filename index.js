@@ -11,10 +11,13 @@ const io = require("socket.io")(server);
 
 server.listen(process.env.PORT || 3000);
 
-//caro
 app.get("/", (req, res) => {
     res.render("gomoku2Player", { page: "gomoku2Player" })
 })
+app.get("/admin", (req, res) => {
+    res.render("admin", { page: "admin" })
+})
+//caro
 app.get("/gomoku-2-player", (req, res) => {
     res.render("gomoku2Player", { page: "gomoku2Player" })
 })
@@ -42,6 +45,7 @@ let listPlayer = [];
 let listPlayerName = [];
 let player1Ready = false;
 let player2Ready = false;
+//
 let roomNum = 12;
 let x = 20, y = 25;
 let arrRoom = new Array(roomNum);
@@ -50,15 +54,23 @@ for (let i = 0; i < roomNum; i++) {
     arrRoom[i] = new Array(3);
     arrRoom[i][0] = new Array();
     arrRoom[i][1] = new Array();
-
+    createDataChess(i);
 }
-
+//
+let numStatusPlayer = 2;
+let arrStatusPlayer = [];
+arrStatusPlayer = new Array(roomNum);
+for (let i = 0; i < roomNum; i++) {
+    arrStatusPlayer[i] = new Array(numStatusPlayer);
+    arrStatusPlayer[i][0] = false;
+    arrStatusPlayer[i][i] = false;
+}
 
 //socket io
 io.on("connection", (socket) => {
     listPlayer.push(socket.id);
     listPlayerName.push("");
-    console.log( socket.id + "Đã kết nối!! " )
+    console.log(socket.id + "Đã kết nối!! ")
 
     socket.on("client-send-data", data => {
         console.log(data)
@@ -67,12 +79,12 @@ io.on("connection", (socket) => {
         updateDataGame(data.idRoomNumber, data.xflag, data.x, data.y);
         io.to(data.idRoomNumber + "").emit("server-send-data-for-all", data);
     });
-    socket.on("client-send-username",data =>{
-        let status = checkUsername(data.username,socket.id);
-        if(status){
-            socket.emit("server-send-signin-status",{status:status,username:data.username});
-        }else{
-            socket.emit("server-send-signin-status",{status:status});
+    socket.on("client-send-username", data => {
+        let status = checkUsername(data.username, socket.id);
+        if (status) {
+            socket.emit("server-send-signin-status", { status: status, username: data.username });
+        } else {
+            socket.emit("server-send-signin-status", { status: status });
         }
     });
     socket.on("client-request-datagame", data => {
@@ -86,8 +98,9 @@ io.on("connection", (socket) => {
                 listPlayer: arrRoom[idRoomNumber][0],
                 listPlayerName: arrRoom[idRoomNumber][1]
             });
+            io.sockets.emit("clients-update-list-room", { arrRoom: arrRoom });
         }
-        io.sockets.emit("clients-update-list-room", "server-send-leave-room-success");
+        socket.emit("server-send-leave-room-success");
     });
     socket.on("client-send-mess", data => {
         ordPlayer = orderPlayer(socket.id, data.idRoomNumber);
