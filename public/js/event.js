@@ -23,7 +23,7 @@ socket.on("server-send-data-for-all",function(data){
     let i=data.x,j=data.y;
         if(isWatchOnly(socket.id)==false){
             if(data.xflag == true){
-                $("#pos-"+i+"-"+j).css('background-image', 'url("Images/gomoku/X-chess-color.png")');
+                $("#pos-"+i+"-"+j).css('background-image', 'url("images/gomoku/X-chess-color.png")');
                 arrChess[i][j] = 1;
                 if(xflag==true){
                     gameFinish = true;
@@ -31,7 +31,7 @@ socket.on("server-send-data-for-all",function(data){
                     gameFinish = false;
                 }
             }else{
-                $("#pos-"+i+"-"+j).css('background-image', 'url("Images/gomoku/O-chess-color.png")');
+                $("#pos-"+i+"-"+j).css('background-image', 'url("images/gomoku/O-chess-color.png")');
                 arrChess[i][j] = 0;
                 if(xflag==false){
                     gameFinish = true;
@@ -47,10 +47,10 @@ socket.on("server-send-data-for-all",function(data){
             findPlayerWin();
         }else{//
             if(data.xflag == true){
-                $("#pos-"+i+"-"+j).css('background-image', 'url("Images/gomoku/X-chess-color.png")');
+                $("#pos-"+i+"-"+j).css('background-image', 'url("images/gomoku/X-chess-color.png")');
                 arrChess[i][j] = 1;
             }else{
-                $("#pos-"+i+"-"+j).css('background-image', 'url("Images/gomoku/O-chess-color.png")');
+                $("#pos-"+i+"-"+j).css('background-image', 'url("images/gomoku/O-chess-color.png")');
                 arrChess[i][j] = 0;
             }
             findPlayerWin();

@@ -22,7 +22,7 @@ $(document).ready(function () {
         }
     });
     //
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 1; i <= roomNum; i++) {
         $("#my-div-table-id-" + i).click(function () {
             idRoomNumber = i - 1;
             if (username != "" && unableJoinRoom == false) {
@@ -55,7 +55,6 @@ $(document).ready(function () {
         for (let i = 0; i < roomNum; i++) {
             if (arrRoom[i][0].length == 0) {
                 $("#table-" + i + "-img").attr("src", "../images/tables/table-0.png");
-                console.log(i)
             } else if (arrRoom[i][0].length == 1) {
                 $("#table-" + i + "-img").attr("src", "../images/tables/table-1.png");
             } else {

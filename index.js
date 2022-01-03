@@ -27,18 +27,6 @@ app.get("/gomoku-1-player", (req, res) => {
 app.get("/gomoku-online", (req, res) => {
     res.render("gomokuOnline", { page: "gomokuOnline" });
 })
-//cờ tướng
-app.get("/xiangqi-2-player", (req, res) => {
-    res.render("xiangqi2Player", { page: "xiangqi2Player" });
-})
-app.get("/xiangqi-1-player", (req, res) => {
-    res.render("xiangqi1Player", { page: "xiangqi1Player" });
-})
-app.get("/xiangqi-online", (req, res) => {
-    res.render("xiangqiOnline", { page: "xiangqiOnline" });
-})
-
-
 
 // khởi tạo 
 let listPlayer = [];

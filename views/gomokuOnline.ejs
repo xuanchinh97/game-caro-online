@@ -29,7 +29,7 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <!-- loop bàn chờ -->
-                        <% for(var i=1; i < 13; i++) { %>
+                        <% for(var i=1; i <= 12; i++) { %>
                         <div id="my-div-table-id-<%= i %>" class="col-lg-3 col-xs-6 my-tables border-left-grey">
                             <!-- small box -->
                             <div class="small-box bg-aqua">
@@ -37,7 +37,7 @@
                                     <p id="id-ban-<%= i %>-p" class="my-table-name-p">Bàn <%= i %></p>
                                 </div>
                                 <div class="icon">
-                                    <img id="table-<%= i-1 %>-img" class="table-image"/>
+                                    <img id="table-<%= i-1 %>-img" class="table-image" />
                                 </div>
                             </div>
                         </div>
