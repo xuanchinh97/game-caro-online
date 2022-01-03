@@ -1,5 +1,10 @@
-@import url("dashboard.css");
-@import url("editBootstrap.css");
+@import url(dashboard.css);
+@import url(gomoku.css);
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+	font-family: 'Patrick Hand', cursive;
+}
 
 /*loader*/
 .loader {

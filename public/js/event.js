@@ -1,3 +1,7 @@
+var socket = io();//setup socket
+
+
+
 $("#btn-ready-gomoku").click(function(){
     restartGame();
 });
@@ -189,7 +193,7 @@ function playerTwoStatus(){
     $(".p-player-status").text("Tìm thấy người chơi. Hãy sẵn sàng..");
 }
 function showListPlayer(listPlayerName){
-    $("#div-list-player").html("");
+    // $("#div-list-player").html(<span class="div-player-title">Player</span>);
     listPlayerName.forEach(element => {
         $("#div-list-player").append('<div class="player">'+ element +'</div>');
     });

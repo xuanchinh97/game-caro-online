@@ -1,14 +1,37 @@
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Cờ Caro</a>
-    <ul class="navbar-nav px-3">
-      <li class="nav-item text-nowrap">
-        <a id="btn-sign-in" class="nav-link" data-toggle="modal" data-target="#signInModal">Đăng nhập</a> 
+<nav class="navbar navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a style="display: flex; align-items: center;" class="navbar-brand" href="/">
+      <img src="./images/logo.png" alt="Cờ caro" width="30px" style="margin-right: 10px;"
+        class="d-inline-block align-text-top">
+      <h1>Cờ Caro</h1>
+    </a>
+
+    <ul class="navbar-items navbar-nav">
+      <li class="navbar-item">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+      </li>
+      <li class="navbar-item">
+        <a class="nav-link" href="https://xuanchinhmobile.cf/" target="_blank">Store</a>
+      </li>
+      <li class="navbar-item">
+        <a class="nav-link" href="https://xuanchinh97.github.io/Play_music/" target="_blank">Music</a>
+      </li>
+      <li class="navbar-item">
+        <a class="nav-link" href="https://xuanchinh97.github.io/Todo-list/" target="_blank">To-do</a>
+      </li>
+      <li class="navbar-item">
+        <a class="nav-link" href="https://xuanchinh97.github.io/Bio_link/" target="_blank">Contact</a>
+      </li>
+      <li class="navbar-item text-nowrap">
+        <a id="btn-sign-in" class="nav-link" data-toggle="modal" data-target="#signInModal">Đăng nhập</a>
       </li>
     </ul>
+  </div>
 </nav>
 
 <!-- Modal -->
-<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -18,7 +41,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" class="form-control ds-input" id="username-input" placeholder="Tên đăng nhập" >
+        <input type="text" class="form-control ds-input" id="username-input" placeholder="Tên đăng nhập">
         <p class="notice-error">Thông báo lỗi</p>
       </div>
       <div class="modal-footer">

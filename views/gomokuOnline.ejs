@@ -3,12 +3,11 @@
 
 <head>
     <%- include('masterPage/head.ejs'); -%>
-    <link rel="stylesheet" href="css/gomoku.css">
     <script defer src="js/listTableGomokuOnline.js"></script>
     <script defer src="js/processGomokuOnline.js"></script>
     <script defer src="js/event.js"></script>
     <script defer src="js/messageEvent.js"></script>
-    <title>Game Caro Online - 97</title>
+    <title>Game Cờ Caro Online - 97</title>
 </head>
 
 <body>
@@ -57,26 +56,26 @@
                     </div>
                     <h3 class="notice-result"></h3>
                     <div class="div-option">
-                        <div style="width: 100%;height: 37px;">
-                            <button id="btn-leave-room-gomoku-online" type="button" class="btn btn-danger btn-leave">Rời
-                                phòng</button>
+                        <div class="btn-leave-and-ready">
                             <button id="btn-ready-gomoku-online" type="button"
                                 class="unready btn btn-success btn-play">Sẵn sàng</button>
+                            <button id="btn-leave-room-gomoku-online" type="button" class="btn btn-danger btn-leave">Rời
+                                phòng</button>
                         </div>
                         <div style="width: 100%;height: 31px;">
                             <p class="p-player-status">Đang chờ đối thủ </p>
                         </div>
                         <div id="div-player">
-                            <div id="div-list-player"></div>
                             <div id="div-convers-player">
-                                <div id="div-mess-player">
-                                </div>
-                                <div id="div-input-mess-player">
-                                    <input type="text" id="input-mess" placeholder="Nhập tin nhắn.."
-                                        aria-label="Text input">
-                                    <button id="btn-send-mess"><i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                    </button>
-                                </div>
+                                <div id="div-mess-player"><span class="div-player-title">Trò chuyện</span><hr> </div>
+                                <div id="div-list-player"><span class="div-player-title">Player</span><hr></div>
+                            </div>
+
+                            <div id="div-input-mess-player">
+                                <input type="text" id="input-mess" placeholder="Nhập tin nhắn.."
+                                    aria-label="Text input">
+                                <button id="btn-send-mess"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </div>

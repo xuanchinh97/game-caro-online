@@ -12,10 +12,10 @@ const io = require("socket.io")(server);
 server.listen(process.env.PORT || 3000);
 
 app.get("/", (req, res) => {
-    res.render("gomoku2Player", { page: "gomoku2Player" })
+    res.render("load")
 })
 app.get("/admin", (req, res) => {
-    res.render("admin", { page: "admin" })
+    res.render("admin")
 })
 //caro
 app.get("/gomoku-2-player", (req, res) => {
