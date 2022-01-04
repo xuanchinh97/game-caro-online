@@ -3,6 +3,7 @@
 
 <head>
     <%- include('masterPage/head.ejs'); -%>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script defer src="js/processGomoku1Player.js"></script>
     <script defer src="js/AIGomoku.js"></script>
     <title>Game Cờ Caro 1 Player - 97</title>
@@ -34,6 +35,9 @@
                         <button id="btn-ready-gomoku" value="PLAYER VS COMPUTER" onClick="PvsM()" type="button"
                             class="btn btn-success btn-play float-left">Chơi
                             Lại</button>
+                        <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_fkqcbrlp.json"
+                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                        </lottie-player>
                         <div class="div-option2">
                             <div>
                                 <input type="checkbox" id="chbtime" onClick="TimeReturn()" /><b> - TIME:</b>

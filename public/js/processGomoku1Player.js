@@ -117,7 +117,7 @@ function WinGame() {
 				|| winCross2(x, y, Board)) {
 				var square = document.getElementsByClassName("square");
 				for (i = 0; i < l_win.length; i++) {
-					square.item(l_win[i]).style.backgroundColor = "#FF0";
+					square.item(l_win[i]).style.backgroundColor = "#4fa746";
 				}
 				result = true;
 			}
