@@ -1,9 +1,8 @@
-let socket = io();//setup socket
+var socket = io();//setup socket
 let idRoomNumber = -1;
 let unableJoinRoom = false;
 $(document).ready(function () {
     let username = "";
-    //
     let roomNum = 12;
     let arrRoom = [];
     $(".table-image").attr("src", "../images/tables/table-0.png");

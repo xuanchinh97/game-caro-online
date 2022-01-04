@@ -1,11 +1,10 @@
 var socket = io();//setup socket
 
-
-
+// ready 2player
 $("#btn-ready-gomoku").click(function(){
     restartGame();
 });
-///
+// ready online
 $("#btn-ready-gomoku-online").click(function(){
     if(unableBtnPlay == false){
         if($("#btn-ready-gomoku-online").hasClass("unready")==true){
@@ -168,11 +167,11 @@ function findPlayerStatus(){
     gameFinish = true;
     xflag = true;
     $("#btn-ready-gomoku-online").text("Sẵn sàng");
-    $(".p-player-status").text("Đang tìm đối thủ..");
+    $(".p-player-status").text("Đang tìm đối thủ...");
 }
 function watchOnlyStatus(){
     gameStop = true;
-    $("#btn-ready-gomoku-online").text("Chỉ xem..");
+    $("#btn-ready-gomoku-online").text("Chỉ xem...");
     $("#btn-ready-gomoku-online").removeClass("btn-success").addClass("btn-warning");
     $(".p-player-status").text("");
 }
@@ -182,7 +181,7 @@ function playerOneStatus(){
     $("#btn-ready-gomoku-online").addClass("unready").removeClass("ready");
     $("#btn-ready-gomoku-online").removeClass("btn-warning").addClass("btn-success");
     $("#btn-ready-gomoku-online").text("Sẵn sàng");
-    $(".p-player-status").text("Tìm thấy người chơi. Hãy sẵn sàng..");
+    $(".p-player-status").text("Tìm thấy người chơi. Hãy sẵn sàng...");
 }
 function playerTwoStatus(){
     xflag = false;
@@ -190,7 +189,7 @@ function playerTwoStatus(){
     $("#btn-ready-gomoku-online").addClass("unready").removeClass("ready");
     $("#btn-ready-gomoku-online").removeClass("btn-warning").addClass("btn-success");
     $("#btn-ready-gomoku-online").text("Sẵn sàng");
-    $(".p-player-status").text("Tìm thấy người chơi. Hãy sẵn sàng..");
+    $(".p-player-status").text("Tìm thấy người chơi. Hãy sẵn sàng...");
 }
 function showListPlayer(listPlayerName){
     // $("#div-list-player").html(<span class="div-player-title">Player</span>);

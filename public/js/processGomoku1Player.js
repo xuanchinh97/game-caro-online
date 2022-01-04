@@ -1,33 +1,31 @@
 // JavaScript Document
 
-const size = 16;
+const size = 20;
 const countmax = 5;
 var CPlayer = 0; // Current Player (0 is O,1 is X)
 var InGame = false;
 var l_played = [], l_win = [];
 var mode = 0; // 0: no block; 1: block
 var timereturn = false;
-var AI = false;
+var AI = true;
 
 //New Game
 function Loaded() {
 	CPlayer = 0; // Current Player (0 is O,1 is X)
 	l_played = [], l_win = [];
-	var imgp = document.getElementById("imgPlayer");
-	imgp.style.backgroundImage = "url('Images/Opng.png')";
 
 
 	var table = document.getElementById("table");
-	var row = document.getElementsByClassName("row");
+	var tableRow = document.getElementsByClassName("tableRow");
 	var square = document.getElementsByClassName("square");
 
 	// Create Table
 	table.innerHTML = "";
 	for (y = 0; y < size; y++) {
-		table.innerHTML += '<tr class="row"></tr>';
+		table.innerHTML += '<tr class="tableRow"></tr>';
 		for (x = 0; x < size; x++) {
 			var div = '<div class="square" onClick="Click(id)" onMouseOver="MouseOver(id)" onMouseOut="MouseOut(id)"></div>';
-			row.item(y).innerHTML += '<td class="col">' + div + '</td>';
+			tableRow.item(y).innerHTML += '<td class="tableColumn">' + div + '</td>';
 			square.item(x + y * size).setAttribute("id", (x + y * size).toString());
 			square.item(x + y * size).setAttribute("player", "-1");
 		}
@@ -40,8 +38,8 @@ function Click(id) {
 	var square = document.getElementsByClassName("square");
 	var pos = parseInt(id);
 	if (square.item(pos).getAttribute("player") != "-1") return;
-	var path = "url('Images/Opng.png')";
-	if (CPlayer == 1) path = "url('Images/Xpng.png')";
+	var path = "url('../images/gomoku/O-chess-color.png')";
+	if (CPlayer == 1) path = "url('../images/gomoku/X-chess-color.png')";
 	square.item(pos).style.backgroundImage = path;
 	square.item(pos).setAttribute("player", CPlayer.toString());
 	l_played.push(pos);
@@ -53,10 +51,8 @@ function Click(id) {
 		if (CPlayer == 0) CPlayer = 1;
 		else CPlayer = 0;
 
-		var iplayer = "url('Images/Opng.png')";
-		if (CPlayer == 1) iplayer = "url('Images/Xpng.png')";
-		var imgp = document.getElementById("imgPlayer");
-		imgp.style.backgroundImage = iplayer;
+		var iplayer = "url('../images/gomoku/O-chess-color.png')";
+		if (CPlayer == 1) iplayer = "url('../images/gomoku/X-chess-color.png')";
 	}
 	else {
 		if (!win) {
@@ -67,14 +63,24 @@ function Click(id) {
 	}
 
 	if (win) {
-		var mess = 'Player with "X" win';
-		if (pwin == 0) mess = 'Player with "O" win';
-		alert(mess);
+		showPlayerWin(pwin);
 		InGame = false;
 	}
 	else {
 		var pgr = document.getElementById("pgrTime");
 		pgr.value = pgr.getAttribute("max");
+	}
+}
+
+function showPlayerWin(player) {
+	if (player == 0) {
+		$(".notice-result").text("O chiến thắng!!");
+		$(".notice-result").css("display", "block");
+		jQuery("#table").css('opacity', '0.6');
+	} else if (player == 1) {
+		$(".notice-result").text("X chiến thắng!!");
+		$(".notice-result").css("display", "block");
+		jQuery("#table").css('opacity', '0.6');
 	}
 }
 
@@ -273,10 +279,8 @@ function Undo(time) {
 	if (CPlayer == 0) CPlayer = 1;
 	else CPlayer = 0;
 
-	var iplayer = "url('Images/Opng.png')";
-	if (CPlayer == 1) iplayer = "url('Images/Xpng.png')";
-	var imgp = document.getElementById("imgPlayer");
-	imgp.style.backgroundImage = iplayer;
+	var iplayer = "url('../images/gomoku/O-chess-color.png')";
+	if (CPlayer == 1) iplayer = "url('../images/gomoku/X-chess-color.png')";
 
 	var pgr = document.getElementById("pgrTime");
 	pgr.value = pgr.getAttribute("max");
@@ -310,10 +314,25 @@ function LoadProgress() {
 			if (pgr.value > 0)
 				LoadProgress();
 			else {
-				var mess = 'Player with "X" win';
-				if (CPlayer == 1) mess = 'Player with "O" win';
-				alert(mess);
+				if (CPlayer == 0) {
+					$(".notice-result").text("X chiến thắng!!");
+					$(".notice-result").css("display", "block");
+					jQuery("#table").css('opacity', '0.6');
+				} else{
+					$(".notice-result").text("O chiến thắng!!");
+					$(".notice-result").css("display", "block");
+					jQuery("#table").css('opacity', '0.6');
+				}
 				InGame = false;
 			}
 		}, 100);
 }
+$("#btn-ready-gomoku").click(function () {
+	restartGame();
+});
+function restartGame() {
+	$(".notice-result").css("display", "none");
+	jQuery("#table").css('opacity', '1');
+}
+
+PvsM();

@@ -14,13 +14,14 @@
     <!--loading-->
     <div class="loader"></div>
     <!-- navbar  -->
-    <%- include('masterPage/narbar.ejs'); -%>
+    <%- include('masterPage/navbar.ejs'); -%>
 
     <div class="container-fluid screen-container">
         <div class="row">
             <!-- navigation  -->
             <%- include('masterPage/navigation.ejs'); -%>
-            <main id="main-list-room" role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 row my-main">
+            <main id="main-list-room" role="main"
+                class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 row my-main chess">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 col-md-12">
                     <h1 class="h2 center-block">Danh sách các bàn</h1>
@@ -45,10 +46,10 @@
                     </div>
                 </div>
             </main>
-            <main id="main-room" style="display: none;" role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 row">
+            <main id="main-room" style="display: none;" role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 row chess">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 col-md-12">
-                    <h1 class="h2 center-block title-GO">Cờ Caro Online</h1>
+                    <h1 class="h2 center-block title-GO">Chơi online</h1>
                     <h3>
                 </div>
                 <div class="col-sm-12">
@@ -67,8 +68,12 @@
                         </div>
                         <div id="div-player">
                             <div id="div-convers-player">
-                                <div id="div-mess-player"><span class="div-player-title">Trò chuyện</span><hr> </div>
-                                <div id="div-list-player"><span class="div-player-title">Player</span><hr></div>
+                                <div id="div-mess-player"><span class="div-player-title">Trò chuyện</span>
+                                    <hr>
+                                </div>
+                                <div id="div-list-player"><span class="div-player-title">Player</span>
+                                    <hr>
+                                </div>
                             </div>
 
                             <div id="div-input-mess-player">
