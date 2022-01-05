@@ -176,12 +176,12 @@
 	overflow:hidden; */
 }
 #divmain #table {
-  border: 1px solid rgb(0, 0, 0, 0.8);
+  border: 1px solid rgb(0, 0, 0, 0.6);
   border-right: none;
   border-bottom: none;
 }
 #divmain #table .square {
-  border: 1px solid rgb(0, 0, 0, 0.8);
+  border: 1px solid rgb(0, 0, 0, 0.6);
   border-top: none;
   border-left: none;
 }
