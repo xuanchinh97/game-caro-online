@@ -1,0 +1,91 @@
+@media (max-width: 800px) {
+  :root {
+    --nav-bar: 60px;
+  }
+
+  .navbar-items {
+    width: 50%;
+  }
+
+  .navbar-item {
+    margin: 5px;
+  }
+
+  .navbar-item:nth-child(1),
+  .navbar-item:nth-child(2),
+  .navbar-item:nth-child(3),
+  .navbar-item:nth-child(4),
+  .navbar-item:nth-child(5),
+  .navbar-item:nth-child(6) {
+    display: none;
+  }
+
+  .sidebar {
+    width: 60px;
+    display: block !important;
+  }
+
+  .div-option {
+    position: relative !important;
+    left: 60px !important;
+    width: 400px;
+  }
+
+  .my-tables {
+    width: 25%;
+    margin: 5px !important;
+    left: 50px;
+  }
+
+  .my-table-name-p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .sidebar-sticky span {
+    font-size: 10px;
+  }
+
+  #chess {
+    position: absolute;
+    right: -20px;
+  }
+
+  .h2 {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .sidebar-sticky ul {
+    font-size: 14px;
+  }
+
+  .square {
+    width: 18px;
+    height: 18px;
+  }
+
+  .container-fluid {
+    height: var(--nav-bar);
+  }
+
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar-items {
+    align-items: flex-start;
+  }
+
+  .modal-backdrop {
+    width: 100%;
+  }
+
+  lottie-player {
+    width: 380px !important;
+    /* width: 100% !important; */
+    /* display: none; */
+  }
+}
